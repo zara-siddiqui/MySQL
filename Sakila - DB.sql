@@ -1,0 +1,15 @@
+USE sakila;
+SHOW FULL TABLES;
+SELECT * FROM actor,film,customer;
+SELECT title FROM film;
+SELECT name FROM language;
+SELECT first_name FROM staff;
+SELECT DISTINCT release_year FROM film;
+SELECT COUNT(*) AS num_stores FROM store;
+SELECT COUNT(*) AS num_employees FROM staff;
+SELECT COUNT(rental_id) AS rented FROM rental;
+SELECT COUNT(inventory_id) AS available_for_rent FROM rental;
+SELECT COUNT(DISTINCT (last_name)) FROM actor;
+SELECT title,length FROM film ORDER BY length DESC LIMIT 10;
+SELECT * FROM actor WHERE first_name = "SCARLETT";
+SELECT title, length FROM film WHERE title LIKE '%ARMAGEDDON%' AND length > 100;
